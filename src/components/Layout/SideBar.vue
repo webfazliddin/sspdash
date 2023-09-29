@@ -11,7 +11,7 @@
         to="/"
       >
         <div>
-          <img src="../../assets/logo/logo.png" />
+          <img src="@/assets/logo/logo.png" />
         </div>
         <div class="sideBar__logo--title">SSP</div>
       </RouterLink>

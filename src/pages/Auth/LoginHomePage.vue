@@ -10,7 +10,7 @@
         <RouterLink to="/auth/login">
           <BaseButton variant="blue" class="aside__baseBtn">
             <div class="aside__baseBtn--item">
-              <div><img src="../../assets/login/icons/user-white.svg" /></div>
+              <div><img src="@/assets/login/icons/user-white.svg" /></div>
               <div>Login bilan kirish</div>
             </div>
           </BaseButton>
@@ -21,7 +21,7 @@
         <RouterLink to="/auth/login">
           <BaseButton variant="blue" class="aside__baseBtn">
             <div class="aside__baseBtn--item">
-              <div><img src="../../assets/login/icons/lock-white.svg" /></div>
+              <div><img src="@/assets/login/icons/lock-white.svg" /></div>
               <div>E-imzo kaliti bilan kirish</div>
             </div>
           </BaseButton>

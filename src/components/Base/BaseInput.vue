@@ -23,7 +23,7 @@
 
       <div v-if="type === 'user'" :class="$style.append">
         <button :class="$style.passwordToggle">
-          <img src="../../assets//login/icons/user-dark.svg" />
+          <img src="@/assets//login/icons/user-dark.svg" />
         </button>
 
         <!-- <button

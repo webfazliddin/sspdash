@@ -165,7 +165,7 @@
       >
         <img
           style="width: 580px; margin-bottom: 76px"
-          src="../../assets/chart/chart.png"
+          src="@/assets/chart/chart.png"
         />
       </div>
 

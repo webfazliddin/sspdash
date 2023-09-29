@@ -11,7 +11,7 @@
           />
           <img
             :class="$style.search__icon"
-            src="../../assets/header/search.svg"
+            src="@/assets/header/search.svg"
           />
         </div>
 

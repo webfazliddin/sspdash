@@ -53,7 +53,7 @@
           <div class="baseBtn__item">
             <div>Kirish</div>
             <div>
-              <img src="../../assets/login/icons/arrow-right-white.svg" />
+              <img src="@/assets/login/icons/arrow-right-white.svg" />
             </div>
           </div>
         </BaseButton>
