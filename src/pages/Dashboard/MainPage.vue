@@ -249,7 +249,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { reactive, ref } from "vue";
 
 const activetab = ref("1");
