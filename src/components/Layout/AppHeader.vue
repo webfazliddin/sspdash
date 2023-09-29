@@ -4,15 +4,39 @@
       <div :class="$style.logo">20 ming tadbirkor</div>
       <div :class="$style.headerRight">
         <div :class="$style.search">
-          <input
-            :class="$style.search__input"
-            type="text"
-            placeholder="Qidirish"
-          />
-          <img
-            :class="$style.search__icon"
-            src="@/assets/header/search.svg"
-          />
+          <input :class="$style.search__input" type="text" placeholder="Qidirish" />
+          <div :class="$style.search__icon">
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 21 21"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Search">
+                <path
+                  id="Stroke 1"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.189 1.62262C14.9166 1.62262 18.75 5.455 18.75 10.1836C18.75 14.9121 14.9166 18.7445 10.189 18.7445C5.46043 18.7445 1.62805 14.9121 1.62805 10.1836C1.62805 5.455 5.46043 1.62262 10.189 1.62262Z"
+                  stroke="#626466"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  id="Stroke 3"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M18.8125 17.3959C19.5916 17.3959 20.223 18.0283 20.223 18.8064C20.223 19.5864 19.5916 20.2178 18.8125 20.2178C18.0335 20.2178 17.4011 19.5864 17.4011 18.8064C17.4011 18.0283 18.0335 17.3959 18.8125 17.3959Z"
+                  stroke="#626466"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
 
         <button :class="$style.btnDownload">
@@ -74,13 +98,7 @@
                 viewBox="0 0 9 9"
                 fill="none"
               >
-                <circle
-                  cx="4.91357"
-                  cy="4.90833"
-                  r="3.5"
-                  fill="#FD5A33"
-                  stroke="white"
-                />
+                <circle cx="4.91357" cy="4.90833" r="3.5" fill="#FD5A33" stroke="white" />
               </svg>
             </div>
           </div>
@@ -148,9 +166,7 @@
         </BaseRoundedButton>
 
         <div :class="$style.userProfileButton">
-          <div :class="$style.userProfileButton__title">
-            "INFINITE INTELLECT" MCHJ
-          </div>
+          <div :class="$style.userProfileButton__title">"INFINITE INTELLECT" MCHJ</div>
           <div>
             <BaseRoundedButton>
               <svg
@@ -176,24 +192,24 @@
 </template>
 
 <script setup lang="ts">
-import classnames from "classnames";
-import { useAuthStore } from "@/stores/authStore";
-import { RouterLink, useRouter } from "vue-router";
+import classnames from 'classnames'
+import { useAuthStore } from '@/stores/authStore'
+import { RouterLink, useRouter } from 'vue-router'
 
 export interface IAppHeader {
-  elevated?: boolean;
+  elevated?: boolean
 }
 
 withDefaults(defineProps<IAppHeader>(), {
-  elevated: false,
-});
+  elevated: false
+})
 
-const router = useRouter();
-const { isLoggedIn } = useAuthStore();
+const router = useRouter()
+const { isLoggedIn } = useAuthStore()
 
 const navigateLogin = () => {
-  router.push("/auth/login");
-};
+  router.push('/auth/login')
+}
 </script>
 
 <style module lang="scss">
@@ -222,10 +238,9 @@ const navigateLogin = () => {
 .search {
   position: relative;
   display: none;
-  @include breakpoint("md") {
-   display: block;
+  @include breakpoint('md') {
+    display: block;
   }
-
 
   &__input {
     font-family: $base-font;
@@ -270,12 +285,10 @@ const navigateLogin = () => {
   transition: box-shadow 0.15s ease-in-out;
   &__inner {
     display: none;
-    @include breakpoint("md") {
-   display: block;
+    @include breakpoint('md') {
+      display: block;
+    }
   }
-  }
-
-
 
   &:hover {
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.16);

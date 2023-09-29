@@ -44,16 +44,25 @@
     <div class="parentBtn">
       <div></div>
       <div>
-        <BaseButton
-          variant="blue"
-          class="baseBtn"
-          :loading="isLoading"
-          @on-click="login"
-        >
+        <BaseButton variant="blue" class="baseBtn" :loading="isLoading" @on-click="login">
           <div class="baseBtn__item">
             <div>Kirish</div>
             <div>
-              <img src="@/assets/login/icons/arrow-right-white.svg" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="10"
+                height="18"
+                viewBox="0 0 10 18"
+                fill="none"
+              >
+                <path
+                  d="M1.5625 15.875L8.4375 9L1.5625 2.125"
+                  stroke="white"
+                  stroke-width="2.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
           </div>
         </BaseButton>
@@ -67,77 +76,77 @@
 </template>
 
 <script setup lang="ts">
-import { useAuthStore } from "@/stores/authStore";
-import { ref, reactive } from "vue";
-import { useRouter } from "vue-router";
+import { useAuthStore } from '@/stores/authStore'
+import { ref, reactive } from 'vue'
+import { useRouter } from 'vue-router'
 
 export interface ILoginView {
-  email: string;
-  password: string;
+  email: string
+  password: string
 }
 
-const router = useRouter();
-const authStore = useAuthStore();
-const isLoading = ref<boolean>(false);
-const showPassword = ref(false);
+const router = useRouter()
+const authStore = useAuthStore()
+const isLoading = ref<boolean>(false)
+const showPassword = ref(false)
 const serverError = reactive({
-  message: "",
-});
+  message: ''
+})
 const serverSuccess = reactive({
-  message: "",
-});
+  message: ''
+})
 
 const formData = ref({
-  email: "",
-  password: "",
-});
+  email: '',
+  password: ''
+})
 
 const errors = reactive({
-  email: "",
-  password: "",
-});
+  email: '',
+  password: ''
+})
 
 const showPasswordClick = () => {
-  showPassword.value = !showPassword.value;
-};
+  showPassword.value = !showPassword.value
+}
 
-const changeField = (propertyName: "email" | "password", value: string) => {
-  formData.value[propertyName] = value;
+const changeField = (propertyName: 'email' | 'password', value: string) => {
+  formData.value[propertyName] = value
 
   if (errors[propertyName]) {
-    errors[propertyName] = "";
+    errors[propertyName] = ''
   }
-};
+}
 
 const login = () => {
-  isLoading.value = true;
+  isLoading.value = true
 
   authStore
     .login({
       email: formData.value.email,
-      password: formData.value.password,
+      password: formData.value.password
     })
     .then((response) => {
-      serverError.message = "";
-      serverSuccess.message = response.data.message;
-      router.push("/home");
+      serverError.message = ''
+      serverSuccess.message = response.data.message
+      router.push('/home')
     })
     .catch((error) => {
-      const apiError = error.response.data;
-      serverError.message = apiError.message;
+      const apiError = error.response.data
+      serverError.message = apiError.message
 
       if (apiError.errors.email) {
-        errors.email = apiError.errors.email;
+        errors.email = apiError.errors.email
       }
 
       if (apiError.errors.password) {
-        errors.password = apiError.errors.password;
+        errors.password = apiError.errors.password
       }
     })
     .finally(() => {
-      isLoading.value = false;
-    });
-};
+      isLoading.value = false
+    })
+}
 </script>
 
 <style lang="scss">
