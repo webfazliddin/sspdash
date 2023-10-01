@@ -123,7 +123,7 @@
           </div>
         </BaseRoundedButton>
 
-        <BaseRoundedButton>
+        <BaseRoundedButton :class="$style.languageBtn" @click="showLanguage">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -167,6 +167,12 @@
               stroke-linejoin="round"
             />
           </svg>
+
+          <div v-if="showLang" :class="$style.language">
+            <div style="border-bottom: 1px solid #edeceb">O‘zbekcha</div>
+            <div style="border-bottom: 1px solid #edeceb">Русский</div>
+            <div>Ўзбекча</div>
+          </div>
         </BaseRoundedButton>
 
         <BaseRoundedButton @click="toggleDark()">
@@ -184,7 +190,7 @@
           </svg>
         </BaseRoundedButton>
 
-        <div :class="$style.userProfileButton">
+        <div :class="$style.userProfileButton" @click="showProfile">
           <div :class="$style.userProfileButton__title">"INFINITE INTELLECT" MCHJ</div>
           <div>
             <BaseRoundedButton>
@@ -204,6 +210,133 @@
               </svg>
             </BaseRoundedButton>
           </div>
+
+          <div v-if="show" :class="$style.profileLinks">
+            <a href="#" :class="$style.item">
+              <div :class="$style.svgStroke">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="12"
+                  viewBox="0 0 10 12"
+                  fill="none"
+                >
+                  <circle
+                    cx="4.78938"
+                    cy="3.63921"
+                    r="2.38902"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.999917 9.35088C0.999275 9.18294 1.03684 9.01705 1.10976 8.86576C1.33859 8.40809 1.9839 8.16553 2.51937 8.05569C2.90555 7.97328 3.29706 7.91822 3.69099 7.89093C4.42033 7.82686 5.15388 7.82686 5.88321 7.89093C6.27711 7.91854 6.6686 7.97359 7.05484 8.05569C7.59031 8.16553 8.23561 8.38521 8.46445 8.86576C8.61109 9.17416 8.61109 9.53219 8.46445 9.84059C8.23561 10.3211 7.59031 10.5408 7.05484 10.6461C6.66911 10.7319 6.27746 10.7885 5.88321 10.8154C5.28959 10.8657 4.6932 10.8749 4.09831 10.8429C3.96101 10.8429 3.82829 10.8429 3.69099 10.8154C3.29822 10.7888 2.90807 10.7322 2.52394 10.6461C1.9839 10.5408 1.34317 10.3211 1.10976 9.84059C1.03721 9.68754 0.999684 9.52025 0.999917 9.35088Z"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>Mening kabinetim</div>
+            </a>
+
+            <a href="#" :class="$style.item">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M9.9899 13.7961V9.3771"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.9899 6.2043H9.9999"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.3346 0.750198H5.66561C2.64461 0.750198 0.75061 2.8892 0.75061 5.9162V14.0842C0.75061 17.1112 2.63561 19.2502 5.66561 19.2502H14.3336C17.3646 19.2502 19.2506 17.1112 19.2506 14.0842V5.9162C19.2506 2.8892 17.3646 0.750198 14.3346 0.750198Z"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>Mening ma’lumotlarim</div>
+            </a>
+
+            <a href="#" :class="$style.item">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M13.8554 6.12111L8.1916 11.8227L1.56064 7.74147C0.691759 7.20657 0.867871 5.88697 1.8467 5.60287L17.5022 1.04743C18.3925 0.789782 19.2156 1.62446 18.949 2.51889L14.304 18.1582C14.013 19.1369 12.7082 19.3064 12.1809 18.4325L8.1916 11.8227"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>Telegram Bot</div>
+            </a>
+
+            <a href="#" :class="$style.item">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="21"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  fill="none"
+                >
+                  <path
+                    d="M13.016 5.3895V4.4565C13.016 2.4215 11.366 0.7715 9.331 0.7715H4.456C2.422 0.7715 0.772003 2.4215 0.772003 4.4565V15.5865C0.772003 17.6215 2.422 19.2715 4.456 19.2715H9.341C11.37 19.2715 13.016 17.6265 13.016 15.5975V14.6545"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M19.8095 10.0214H7.76849"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M16.8812 7.10629L19.8092 10.0213L16.8812 12.9373"
+                    stroke="#2364AA"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>Mening kabinetim</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -211,7 +344,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits } from 'vue'
+import { defineEmits, ref } from 'vue'
 import classnames from 'classnames'
 import { useAuthStore } from '@/stores/authStore'
 import { RouterLink, useRouter } from 'vue-router'
@@ -219,6 +352,9 @@ import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
+
+const show = ref(false)
+const showLang = ref(false)
 
 const emit = defineEmits<{
   (e: 'on-click'): void
@@ -241,6 +377,19 @@ const navigateLogin = () => {
 
 const handleButtonClick = () => {
   emit('on-click')
+}
+
+const showProfile = () => {
+  show.value = !show.value
+}
+
+const showLanguage = () => {
+  showLang.value = !showLang.value
+}
+
+const clickOutSide = () => {
+  show.value = false
+  showLang.value = false
 }
 </script>
 
@@ -270,7 +419,6 @@ const handleButtonClick = () => {
 }
 
 .logo {
-  width: 100%;
   font-family: $base-font;
   font-weight: 600;
   text-transform: uppercase;
@@ -375,10 +523,33 @@ const handleButtonClick = () => {
   }
 }
 
+.languageBtn {
+  position: relative;
+}
+
+.language {
+  position: absolute;
+  top: 40px;
+  right: 1px;
+  width: 105px;
+  border-radius: 15px;
+  background: #f7fbff;
+
+  div {
+    padding: 17px 0;
+    font-family: $base-font;
+    color: #667085;
+    &:hover {
+      color: $color-blue;
+    }
+  }
+}
+
 .userProfileButton {
   display: flex;
   align-items: center;
   gap: 2px;
+  position: relative;
 
   &__title {
     width: 161px;
@@ -390,5 +561,40 @@ const handleButtonClick = () => {
       display: block;
     }
   }
+}
+
+.profileLinks {
+  font-family: $base-font;
+  position: absolute;
+  width: 260px;
+  top: 40px;
+  right: 1px;
+  padding: 20px 18px;
+  border-radius: 15px;
+  background: #f7fbff;
+  box-shadow: 8px 8px 24px 0px rgba(2, 2, 70, 0.15);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.svgStroke {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid $color-blue;
+  width: 19px;
+  height: 19px;
+  border-radius: 6px;
+}
+
+a {
+  text-decoration: none;
+  color: #667085;
 }
 </style>

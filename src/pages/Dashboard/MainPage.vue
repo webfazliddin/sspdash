@@ -513,11 +513,21 @@ const donutSeries = [44, 55]
 }
 
 .box-card {
+  width: 360px;
   padding: 22px;
   border-radius: 10px;
   background: $color-white;
   font-family: $base-font;
   color: #151f4a;
+
+  @include breakpoint('md') {
+    width: 100%;
+  }
+  
+  @include breakpoint('lg') {
+    width: 436px;
+    
+  }
 
   &__title {
     font-weight: 700;
