@@ -73,11 +73,10 @@
 <style lang="scss">
 .layout {
   display: grid;
-  grid-template-columns: 1fr;
-  min-height: 100vh;
+  height: 100vh;
 
-  @include breakpoint('md') {
-    grid-template-columns: 1fr 55vw;
+  @include breakpoint('lg') {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -89,6 +88,11 @@
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  visibility: hidden;
+
+  @include breakpoint('lg') {
+    visibility: inherit;
+  }
 }
 
 .mainTitle {

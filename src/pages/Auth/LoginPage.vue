@@ -44,8 +44,7 @@
     <div class="parentBtn">
       <div></div>
       <div>
-        <BaseButton variant="blue" class="baseBtn" :loading="isLoading" @on-click="login">
-          <div class="baseBtn__item">
+        <BaseButton variant="blue" class="baseBtn baseBtn__item" :loading="isLoading" @on-click="login">
             <div>Kirish</div>
             <div>
               <svg
@@ -64,7 +63,6 @@
                 />
               </svg>
             </div>
-          </div>
         </BaseButton>
       </div>
     </div>

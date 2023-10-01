@@ -1,6 +1,25 @@
 <template>
   <header>
     <div :class="$style.parentHeader">
+      <div :class="$style.menu" @click="handleButtonClick">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon-tabler icon-tabler-menu-2"
+          width="25px"
+          height="25px"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+        </svg>
+      </div>
       <div :class="$style.logo">20 ming tadbirkor</div>
       <div :class="$style.headerRight">
         <div :class="$style.search">
@@ -150,7 +169,7 @@
           </svg>
         </BaseRoundedButton>
 
-        <BaseRoundedButton>
+        <BaseRoundedButton @click="toggleDark()">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -192,9 +211,18 @@
 </template>
 
 <script setup lang="ts">
+import { defineEmits } from 'vue'
 import classnames from 'classnames'
 import { useAuthStore } from '@/stores/authStore'
 import { RouterLink, useRouter } from 'vue-router'
+import { useDark, useToggle } from '@vueuse/core'
+
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+
+const emit = defineEmits<{
+  (e: 'on-click'): void
+}>()
 
 export interface IAppHeader {
   elevated?: boolean
@@ -210,35 +238,71 @@ const { isLoggedIn } = useAuthStore()
 const navigateLogin = () => {
   router.push('/auth/login')
 }
+
+const handleButtonClick = () => {
+  emit('on-click')
+}
 </script>
 
 <style module lang="scss">
 .parentHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding: 10px;
+
+  @include breakpoint('lg') {
+    padding: 20px 30px 30px 130px;
+
+    justify-content: space-between;
+  }
+}
+
+.menu {
+  display: block;
+  margin-right: 8px;
+
+  @include breakpoint('lg') {
+    display: none;
+  }
+  &:hover {
+    box-shadow: 0px 8px 20px rgba(168, 166, 166, 0.16);
+  }
 }
 
 .logo {
+  width: 100%;
   font-family: $base-font;
-  font-size: 24px;
   font-weight: 600;
-  line-height: 36px;
   text-transform: uppercase;
   color: $color-blue;
   cursor: pointer;
+  // margin-left: 10px;
+
+  @include breakpoint('md') {
+  }
+
+  @include breakpoint('lg') {
+    font-size: 24px;
+    line-height: 36px;
+    // margin-left: 110px;
+  }
 }
 
 .headerRight {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
+  margin-left: -120px;
+
+  @include breakpoint('lg') {
+    gap: 20px;
+  }
 }
 
 .search {
   position: relative;
   display: none;
-  @include breakpoint('md') {
+  @include breakpoint('xl') {
     display: block;
   }
 
@@ -253,7 +317,7 @@ const navigateLogin = () => {
     border-radius: 16px;
     border: none;
     outline-color: $color-blue;
-    height: 54px;
+    height: 48px;
     min-width: 375px;
     box-sizing: border-box;
   }
@@ -274,7 +338,7 @@ const navigateLogin = () => {
   gap: 10px;
   cursor: pointer;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 15px;
   font-family: $base-font;
   font-weight: 500;
   padding: 13px;
@@ -283,9 +347,15 @@ const navigateLogin = () => {
   background-color: $color-blue;
   border: none;
   transition: box-shadow 0.15s ease-in-out;
+  visibility: hidden;
+
+  @include breakpoint('lg') {
+    visibility: inherit;
+  }
+
   &__inner {
     display: none;
-    @include breakpoint('md') {
+    @include breakpoint('lg') {
       display: block;
     }
   }
@@ -314,6 +384,11 @@ const navigateLogin = () => {
     width: 161px;
     overflow: hidden;
     font-family: $base-font;
+    display: none;
+
+    @include breakpoint('lg') {
+      display: block;
+    }
   }
 }
 </style>

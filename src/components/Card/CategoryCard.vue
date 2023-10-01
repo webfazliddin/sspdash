@@ -39,7 +39,11 @@ const handleClick = () => {
   text-decoration: none;
   font-size: 16px;
   border-radius: 16px;
-  padding: 20px 5px;
+  height: 130px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
   text-align: center;
 
   &:hover {

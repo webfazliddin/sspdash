@@ -9,8 +9,8 @@
   </div>
 
   <div class="filterCard">
-    <div class="filterCard__button">
-      <button>
+    <div class="buttons">
+      <div>
         <div class="button">
           <div>
             <svg
@@ -54,9 +54,9 @@
           </div>
           <div class="text-center">Ariza</div>
         </div>
-      </button>
+      </div>
 
-      <button>
+      <div>
         <div class="button">
           <div>
             <svg
@@ -74,9 +74,9 @@
           </div>
           <div>Shartnoma</div>
         </div>
-      </button>
+      </div>
 
-      <button>
+      <div>
         <div class="button">
           <div>
             <svg
@@ -102,19 +102,15 @@
           </div>
           <div>Sertifikat</div>
         </div>
-      </button>
+      </div>
     </div>
 
-    <div>
-      <div class="tabs">
-        <a
-          v-on:click="activetab = '1'"
-          v-bind:class="[activetab === '1' ? 'active' : '']"
+    <div class="tabs">
+      <div class="tab">
+        <a v-on:click="activetab = '1'" v-bind:class="[activetab === '1' ? 'active' : '']"
           >Tadbirkor soni</a
         >
-        <a
-          v-on:click="activetab = '2'"
-          v-bind:class="[activetab === '2' ? 'active' : '']"
+        <a v-on:click="activetab = '2'" v-bind:class="[activetab === '2' ? 'active' : '']"
           >Yaratilgan ish o`rni</a
         >
       </div>
@@ -130,43 +126,24 @@
 
   <div class="charts">
     <div>
-      <el-card style="margin-bottom: 50px" class="box-card">
-        <div>
-          <apexchart
-            height="327"
-            type="bar"
-            :options="options"
-            :series="series"
-          ></apexchart>
-        </div>
-      </el-card>
+      <div style="margin-bottom: 15px" class="box-card">
+        <apexchart height="237" type="bar" :options="options" :series="series"></apexchart>
+      </div>
 
-      <el-card class="box-card">
-        <div class="chart">
-          <div class="chart__title">ARIZALAR</div>
-          <apexchart
-            height="590"
-            type="bar"
-            :options="arizaOptions"
-            :series="arizaSeries"
-          ></apexchart>
-        </div>
-      </el-card>
+      <div class="box-card">
+        <div class="chart__title">ARIZALAR</div>
+        <apexchart
+          height="270"
+          type="bar"
+          :options="arizaOptions"
+          :series="arizaSeries"
+        ></apexchart>
+      </div>
     </div>
 
     <div>
-      <div
-        style="
-          margin-bottom: 85px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        "
-      >
-        <img
-          style="width: 580px; margin-bottom: 76px"
-          src="@/assets/chart/chart.png"
-        />
+      <div style="display: flex; justify-content: center; align-items: center">
+        <img style="width: 280px" src="@/assets/chart/chart.png" />
       </div>
 
       <div>
@@ -181,6 +158,7 @@
               </select>
             </div>
           </div>
+
           <div>
             <div class="label">Mahalla fuqarolar yig‘ini</div>
             <div>
@@ -194,278 +172,284 @@
         </div>
 
         <div>
-          <el-card class="box-card">
-            <div class="chart">
-              <div class="chart__title">Shartnomalar</div>
-              <apexchart
-                height="400"
-                type="bar"
-                :options="shartnomalarOptions"
-                :series="shartnomalarSeries"
-              ></apexchart>
-            </div>
-          </el-card>
+          <div class="box-card">
+            <div class="chart__title">Shartnomalar</div>
+            <apexchart
+              height="300"
+              type="bar"
+              :options="shartnomalarOptions"
+              :series="shartnomalarSeries"
+            ></apexchart>
+          </div>
         </div>
       </div>
     </div>
 
     <div>
-      <el-card style="margin-bottom: 29px" class="box-card">
-        <div class="chart">
-          <div class="chart__title">SHArtnoma turi bo’yicha</div>
+      <div style="margin-bottom: 15px" class="box-card">
+        <div class="chart__title">SHArtnoma turi bo’yicha</div>
 
-          <apexchart
-            height="490"
-            type="bar"
-            :options="shartnomaTuriOptions"
-            :series="shartnomaTuriSeries"
-          ></apexchart>
-        </div>
-      </el-card>
+        <apexchart
+          height="190"
+          type="bar"
+          :options="shartnomaTuriOptions"
+          :series="shartnomaTuriSeries"
+        ></apexchart>
+      </div>
 
-      <el-card class="box-card">
-        <div class="chart">
-          <div class="chart__title">Sertifikatlar</div>
+      <div class="box-card">
+        <div class="chart__title">Sertifikatlar</div>
 
-          <apexchart
-            height="390"
-            type="donut"
-            :options="donutOptions"
-            :series="donutSeries"
-          ></apexchart>
-          <div class="series">
-            <div class="series__item">
-              <div class="series__item--round"></div>
-              <div class="series__item--title">Sertifikat berilgan</div>
-            </div>
-            <div class="series__item">
-              <div class="series__item--round2"></div>
-              <div class="series__item--title">Sertifikat berilgan</div>
-            </div>
+        <apexchart
+          height="290"
+          type="donut"
+          :options="donutOptions"
+          :series="donutSeries"
+        ></apexchart>
+        <div class="series">
+          <div class="series__item">
+            <div class="series__item--round"></div>
+            <div class="series__item--title">Sertifikat berilgan</div>
+          </div>
+          <div class="series__item">
+            <div class="series__item--round2"></div>
+            <div class="series__item--title">Sertifikat berilgan</div>
           </div>
         </div>
-      </el-card>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref } from 'vue'
 
-const activetab = ref("1");
+const activetab = ref('1')
 
 const options = reactive({
   chart: {
-    type: "candlestick",
-    height: 350,
+    type: 'candlestick',
+    height: 350
   },
   title: {
-    align: "left",
+    align: 'left'
   },
   xaxis: {
     categories: [
-      "Qoraqalog`i…",
-      "Xorazm",
-      "Navoi",
-      "Buxoro",
-      "Qashqadaryo",
-      "Samarqand",
-      "Jizzax",
-      "Sirdaryo",
-      "Toshkent vil.",
-      "Toshkent sh.",
-      "Namangan",
+      'Qoraqalog`i…',
+      'Xorazm',
+      'Navoi',
+      'Buxoro',
+      'Qashqadaryo',
+      'Samarqand',
+      'Jizzax',
+      'Sirdaryo',
+      'Toshkent vil.',
+      'Toshkent sh.',
+      'Namangan',
       "Farg'ona",
-      "Andijon",
-      "Surxondaryo",
-    ],
+      'Andijon',
+      'Surxondaryo'
+    ]
   },
-  colors: ["#2364AA"],
+  colors: ['#2364AA'],
   yaxis: {
     tooltip: {
-      enabled: true,
-    },
-  },
-});
+      enabled: true
+    }
+  }
+})
 
 const series = reactive([
   {
-    data: [30, 40, 35, 50, 29, 60, 47, 40, 35, 50, 29, 60, 47, 51],
-  },
-]);
+    data: [30, 40, 35, 50, 29, 60, 47, 40, 35, 50, 29, 60, 47, 51]
+  }
+])
 
 const arizaOptions = reactive({
   chart: {
-    type: "candlestick",
-    height: 580,
+    type: 'candlestick',
+    height: 580
   },
   title: {
-    align: "left",
+    align: 'left'
   },
   xaxis: {
     categories: [
       "Ko'rib ​chiqilmoqda",
-      "Taklif etilgan",
-      "rad etilgan",
-      "Shartnoma tuzilgan",
-      "Sertifikat ​berilgan",
-    ],
+      'Taklif etilgan',
+      'rad etilgan',
+      'Shartnoma tuzilgan',
+      'Sertifikat ​berilgan'
+    ]
   },
-  colors: ["#2364AA"],
+  colors: ['#2364AA'],
   yaxis: {
     tooltip: {
-      enabled: true,
-    },
-  },
-});
+      enabled: true
+    }
+  }
+})
 
 const arizaSeries = reactive([
   {
-    data: [68, 45, 75, 90, 98],
-  },
-]);
+    data: [68, 45, 75, 90, 98]
+  }
+])
 
 const shartnomalarOptions = reactive({
   chart: {
-    type: "candlestick",
-    height: 580,
+    type: 'candlestick',
+    height: 580
   },
   title: {
-    align: "left",
+    align: 'left'
   },
   xaxis: {
     categories: [
-      "Ekspertizaga yuborilgan",
+      'Ekspertizaga yuborilgan',
       "Ekspertizadan o'tgan",
-      "Ekspertizadan qaytgan",
-      "Imzolanayotgan",
-      "Imzolangan",
-      "Sertifikat shakllantirilgan",
-    ],
+      'Ekspertizadan qaytgan',
+      'Imzolanayotgan',
+      'Imzolangan',
+      'Sertifikat shakllantirilgan'
+    ]
   },
-  colors: ["#02C39A"],
+  colors: ['#02C39A'],
   yaxis: {
     tooltip: {
-      enabled: true,
-    },
-  },
-});
+      enabled: true
+    }
+  }
+})
 
 const shartnomalarSeries = reactive([
   {
-    data: [68, 45, 75, 90, 98, 20],
-  },
-]);
+    data: [68, 45, 75, 90, 98, 20]
+  }
+])
 
 const shartnomaTuriOptions = reactive({
   chart: {
-    type: "candlestick",
-    height: 580,
+    type: 'candlestick',
+    height: 580
   },
   title: {
-    align: "left",
+    align: 'left'
   },
   xaxis: {
-    categories: ["50-100", "100-200", "200+"],
+    categories: ['50-100', '100-200', '200+']
   },
-  colors: ["#2364AA", "#02C39A", "#004E89"],
+  colors: ['#2364AA', '#02C39A', '#004E89'],
   yaxis: {
     tooltip: {
-      enabled: true,
-    },
-  },
-});
+      enabled: true
+    }
+  }
+})
 
 const shartnomaTuriSeries = reactive([
   {
-    name: "Ariza",
-    data: [51, 52, 90],
+    name: 'Ariza',
+    data: [51, 52, 90]
   },
   {
-    name: "Shartnoma",
-    data: [28, 45, 75],
+    name: 'Shartnoma',
+    data: [28, 45, 75]
   },
   {
-    name: "Sertifikat",
-    data: [68, 45, 75],
-  },
-]);
+    name: 'Sertifikat',
+    data: [68, 45, 75]
+  }
+])
 
 const donutOptions = {
-  type: "pie",
+  type: 'pie',
   chart: {
-    height: 400,
+    height: 400
   },
   legend: {
     display: false,
-    show: false,
+    show: false
   },
   plugins: {},
-  colors: ["#02C39A", "#004E89"],
+  colors: ['#02C39A', '#004E89'],
 
   responsive: [
     {
       breakpoint: 480,
       options: {
         chart: {
-          height: 400,
-        },
-      },
-    },
-  ],
-};
+          height: 400
+        }
+      }
+    }
+  ]
+}
 
-const donutSeries = [44, 55];
+const donutSeries = [44, 55]
 </script>
 
 <style lang="scss">
 .category {
   &__list {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 30px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+
+    @include breakpoint('md') {
+      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint('lg') {
+      gap: 30px;
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 }
 
 .filterCard {
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
-  align-items: center;
-  margin-bottom: 30px;
-
-  &__button {
-    display: flex;
-    gap: 10px;
-  }
-}
-
-.charts {
-  display: grid;
   grid-template-columns: 1fr;
   align-items: center;
-  gap: 15px;  
+  margin-bottom: 15px;
+  width: 100%;
 
-    @include breakpoint("sm") {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include breakpoint("md") {
+  @include breakpoint('xl') {
     grid-template-columns: 1fr 2fr 1fr;
   }
 }
 
-button {
-  cursor: pointer;
-  font-family: $base-font;
-  color: $color-white;
-  border: none;
-  border: 1px solid $color-grey;
-  color: $color-grey-dark;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+
+  @include breakpoint('xl') {
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+  align-items: center;
+  border: 1px solid #cecece;
   background: $color-white;
+  color: #667085;
   border-radius: 16px;
-  width: 152px;
+  font-family: $base-font;
+  cursor: pointer;
   height: 50px;
+  width: 100%;
 
   &:hover {
     background: $color-blue;
@@ -477,18 +461,17 @@ button {
   }
 }
 
-.button {
+.tabs {
   display: flex;
-  gap: 14px;
-  align-items: center;
-  padding: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .tabs a {
   font-family: $base-font;
   background: $color-white;
   border-right: none;
-  padding: 14px 20px;
+  padding: 14px;
   cursor: pointer;
 }
 
@@ -509,25 +492,34 @@ button {
   background-color: $color-blue;
   color: $color-white;
 }
+
+.charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 15px;
+
+  @include breakpoint('lg') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint('xl') {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .apexcharts-menu-icon {
   display: none;
 }
 
-// .tabcontent {
-//   padding: 30px 50px;
-//   border: 1px solid #ccc;
-//   border-radius: 10px;
-//   box-shadow: 4px 4px 8px #e1e1e1;
-// }
-
-.chart {
+.box-card {
   padding: 22px;
   border-radius: 10px;
   background: $color-white;
+  font-family: $base-font;
+  color: #151f4a;
 
   &__title {
-    font-family: $base-font;
-    color: #151f4a;
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
@@ -535,15 +527,25 @@ button {
   }
 }
 
+.select {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  font-family: $base-font;
+  margin-bottom: 26px;
+
+  @include breakpoint('lg') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 select {
   width: 100%;
-  padding: 16px 15px;
+  padding: 15px;
   background: #eaf0f7;
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  font-family: $base-font;
-  margin-bottom: 26px;
 }
 
 .label {
@@ -555,11 +557,7 @@ select {
   color: $color-grey;
   margin-bottom: 6px;
 }
-.select {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
+
 .series {
   display: flex;
   gap: 20px;
@@ -590,8 +588,5 @@ select {
       color: #4f4f4f;
     }
   }
-}
-
-@media screen and (max-width: 1590px) {
 }
 </style>

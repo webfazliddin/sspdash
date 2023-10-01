@@ -2,6 +2,14 @@
   <RouterView />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
 
-<style></style>
+
+</script>
+
+<style>
+.dark {
+  background: #000 !important;
+  color: #fff;
+} 
+</style>

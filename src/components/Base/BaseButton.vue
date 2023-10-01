@@ -46,7 +46,7 @@ const handleButtonClick = () => {
   line-height: 20px;
   font-family: $base-font;
   font-weight: bold;
-  padding: 18px;
+  padding: 18px 19px;
   border-radius: 8px;
   color: $color-white;
   background-color: $color-blue;

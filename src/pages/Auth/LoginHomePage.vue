@@ -5,9 +5,8 @@
 
     <div>
       <div>
-        <RouterLink to="/auth/login">
-          <BaseButton variant="blue" class="aside__baseBtn">
-            <div class="aside__baseBtn--item">
+        <RouterLink style="text-decoration: none;" to="/auth/login">
+          <BaseButton variant="blue" class="aside__baseBtn aside__baseBtn--item">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -25,15 +24,13 @@
                 </svg>
               </div>
               <div>Login bilan kirish</div>
-            </div>
           </BaseButton>
         </RouterLink>
       </div>
 
       <div>
-        <RouterLink to="/auth/login">
-          <BaseButton variant="blue" class="aside__baseBtn">
-            <div class="aside__baseBtn--item">
+        <RouterLink style="text-decoration: none;" to="/auth/login">
+          <BaseButton variant="blue" class="aside__baseBtn aside__baseBtn--item">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +53,6 @@
                 </svg>
               </div>
               <div>E-imzo kaliti bilan kirish</div>
-            </div>
           </BaseButton>
         </RouterLink>
       </div>
@@ -68,6 +64,7 @@
 
 <style lang="scss">
 .aside {
+  padding: 0 10px;
   &__title {
     font-family: $base-font;
     font-size: 28px;
