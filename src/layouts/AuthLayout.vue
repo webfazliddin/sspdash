@@ -1,5 +1,6 @@
 <template>
   <div class="layout">
+  <div class="dnone">
     <main class="main">
       <div></div>
 
@@ -59,6 +60,7 @@
         </div>
       </div>
     </main>
+  </div>
 
     <aside class="aside">
       <div class="content">
@@ -84,14 +86,18 @@
   background-image: url(../assets/login/ssp-manbg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  visibility: hidden;
+}
+
+.dnone {
+  display: none;
 
   @include breakpoint('lg') {
-    visibility: inherit;
+    display: block;
   }
 }
 
