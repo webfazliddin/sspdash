@@ -462,17 +462,24 @@ const donutSeries = [44, 55]
 }
 
 .tabs {
-  display: flex;
-  justify-content: center;
   margin-bottom: 15px;
 }
 
+.tab {
+  display: flex;
+  justify-content: center;
+}
+
 .tabs a {
+  width: 100%;
   font-family: $base-font;
-  background: $color-white;
   border-right: none;
-  padding: 14px;
   cursor: pointer;
+  height: 50px;
+  background: $color-white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .tabs a:last-child {
@@ -525,7 +532,11 @@ const donutSeries = [44, 55]
   }
 
   @include breakpoint('lg') {
-    width: 436px;
+    width: 336px;
+  }
+
+  @include breakpoint('xxl') {
+    width: 100%;
   }
 
   &__title {

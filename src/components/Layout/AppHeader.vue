@@ -428,7 +428,6 @@ const clickOutSide = () => {
   text-transform: uppercase;
   color: $color-blue;
   cursor: pointer;
-  // margin-left: 10px;
 
   @include breakpoint('md') {
   }
@@ -436,7 +435,6 @@ const clickOutSide = () => {
   @include breakpoint('lg') {
     font-size: 24px;
     line-height: 36px;
-    // margin-left: 110px;
   }
 }
 
@@ -444,7 +442,7 @@ const clickOutSide = () => {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: -120px;
+  margin-left: -100px;
 
   @include breakpoint('lg') {
     gap: 20px;
