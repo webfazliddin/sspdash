@@ -474,9 +474,9 @@ const donutSeries = [44, 55]
   width: 100%;
   font-family: $base-font;
   border-right: none;
+  background: $color-white;
   cursor: pointer;
   height: 50px;
-  background: $color-white;
   display: grid;
   align-items: center;
   justify-content: center;
