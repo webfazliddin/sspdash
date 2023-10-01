@@ -399,9 +399,13 @@ const clickOutSide = () => {
   align-items: center;
   padding: 10px;
 
+  @include breakpoint('md') {
+    padding: 20px;
+    justify-content: space-between;
+  }
+
   @include breakpoint('lg') {
     padding: 20px 30px 30px 130px;
-
     justify-content: space-between;
   }
 }

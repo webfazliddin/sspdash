@@ -513,7 +513,7 @@ const donutSeries = [44, 55]
 }
 
 .box-card {
-  width: 360px;
+  width: 330px;
   padding: 22px;
   border-radius: 10px;
   background: $color-white;
@@ -523,10 +523,9 @@ const donutSeries = [44, 55]
   @include breakpoint('md') {
     width: 100%;
   }
-  
+
   @include breakpoint('lg') {
     width: 436px;
-    
   }
 
   &__title {
