@@ -420,7 +420,7 @@ const donutSeries = [44, 55]
   @include breakpoint('lg') {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 20px;
+    gap: 22px;
   }
 }
 
