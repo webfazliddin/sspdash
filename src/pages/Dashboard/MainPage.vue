@@ -417,8 +417,10 @@ const donutSeries = [44, 55]
   margin-bottom: 15px;
   width: 100%;
 
-  @include breakpoint('xl') {
-    grid-template-columns: 1fr 2fr 1fr;
+  @include breakpoint('lg') {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
   }
 }
 
@@ -462,7 +464,6 @@ const donutSeries = [44, 55]
 }
 
 .tabs {
-  margin-bottom: 15px;
 }
 
 .tab {
