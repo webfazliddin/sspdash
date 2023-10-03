@@ -1,44 +1,30 @@
 <template>
-  <div class="main-layout">
-    <aside v-if="!visible" class="main-sidebar"><SideBar /></aside>
-    <div>
-      <div class="main-header"><AppHeader @on-click="addMenuClick" /></div>
-      <div class="main-content">
-        <RouterView />
-      </div>
-    </div>
+  <div class="common-layout">
+    <el-container>
+      <el-aside width="100px" class="main-sidebar"><SideBar /></el-aside>
+      <el-container>
+        <el-header><AppHeader /></el-header>
+        <el-main> <RouterView /></el-main>
+      </el-container>
+    </el-container>
   </div>
 </template>
 
 <style lang="scss">
-.main-layout {
+.common-layout {
   background: url(../assets/bg/bgdashboard.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
 }
+
 .main-sidebar {
   display: none;
-  @include breakpoint('lg') {
+
+  @include breakpoint('md') {
     display: block;
-  }
-}
-
-.main-content {
-  padding: 20px 30px 30px 20px;
-
-  @include breakpoint('lg') {
-    padding: 0 30px 30px 130px;
   }
 }
 </style>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-const visible = ref(false)
 
-const addMenuClick = () => {
-  console.log('working')
-  visible.value = !visible.value
-}
-</script>

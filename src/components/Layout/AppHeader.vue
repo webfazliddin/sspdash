@@ -1,30 +1,35 @@
 <template>
   <header>
-    <div :class="$style.parentHeader">
-      <div :class="$style.menu" @click="handleButtonClick">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon-tabler icon-tabler-menu-2"
-          width="25px"
-          height="25px"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path d="M4 6l16 0"></path>
-          <path d="M4 12l16 0"></path>
-          <path d="M4 18l16 0"></path>
-        </svg>
+    <SideBar v-if="showSideBar" />
+    <div class="parentHeader">
+      <div class="headerLeft">
+        <div class="menu" @click="handleButtonClick">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon-tabler icon-tabler-menu-2"
+            width="25px"
+            height="25px"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M4 6l16 0"></path>
+            <path d="M4 12l16 0"></path>
+            <path d="M4 18l16 0"></path>
+          </svg>
+        </div>
+
+        <div class="logo">20 ming tadbirkor</div>
       </div>
-      <div :class="$style.logo">20 ming tadbirkor</div>
-      <div :class="$style.headerRight">
-        <div :class="$style.search">
-          <input :class="$style.search__input" type="text" placeholder="Qidirish" />
-          <div :class="$style.search__icon">
+
+      <div class="headerRight">
+        <div class="search">
+          <input class="search__input" type="text" placeholder="Qidirish" />
+          <div class="search__icon">
             <svg
               width="21"
               height="21"
@@ -58,8 +63,8 @@
           </div>
         </div>
 
-        <button :class="$style.btnDownload">
-          <div :class="$style.btnDownload__inner">
+        <button class="btnDownload">
+          <div class="btnDownload__inner">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -83,7 +88,7 @@
         </button>
 
         <BaseRoundedButton>
-          <div :class="$style.baseRoundedButton">
+          <div class="baseRoundedButton">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -109,7 +114,7 @@
               />
             </svg>
 
-            <div :class="$style.baseRoundedButton__elipse">
+            <div class="baseRoundedButton__elipse">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="9"
@@ -123,7 +128,7 @@
           </div>
         </BaseRoundedButton>
 
-        <BaseRoundedButton :class="$style.languageBtn" @click="showLanguage">
+        <BaseRoundedButton class="languageBtn" @click="showLanguage">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -168,7 +173,7 @@
             />
           </svg>
 
-          <div v-if="showLang" :class="$style.language">
+          <div v-if="showLang" class="language">
             <div style="border-bottom: 1px solid #edeceb">O‘zbekcha</div>
             <div style="border-bottom: 1px solid #edeceb">Русский</div>
             <div>Ўзбекча</div>
@@ -190,8 +195,8 @@
           </svg>
         </BaseRoundedButton>
 
-        <div :class="$style.userProfileButton" @click="showProfile">
-          <div :class="$style.userProfileButton__title">"INFINITE INTELLECT" MCHJ</div>
+        <div class="userProfileButton" @click="showProfile">
+          <div class="userProfileButton__title">"INFINITE INTELLECT" MCHJ</div>
           <div>
             <BaseRoundedButton>
               <svg
@@ -211,9 +216,9 @@
             </BaseRoundedButton>
           </div>
 
-          <div v-if="show" :class="$style.profileLinks">
-            <a href="#" :class="$style.item">
-              <div :class="$style.svgStroke">
+          <div v-if="show" class="profileLinks">
+            <a href="#" class="item">
+              <div class="svgStroke">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="10"
@@ -244,7 +249,7 @@
               <div>Mening kabinetim</div>
             </a>
 
-            <a href="#" :class="$style.item">
+            <a href="#" class="item">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -281,7 +286,7 @@
               <div>Mening ma’lumotlarim</div>
             </a>
 
-            <a href="#" :class="$style.item">
+            <a href="#" class="item">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -302,7 +307,7 @@
               <div>Telegram Bot</div>
             </a>
 
-            <a href="#" :class="$style.item">
+            <a href="#" class="item">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -344,29 +349,21 @@
 </template>
 
 <script setup lang="ts">
-import { defineEmits, ref } from 'vue'
-import classnames from 'classnames'
+import { defineEmits, defineProps, ref } from 'vue'
 import { useAuthStore } from '@/stores/authStore'
-import { RouterLink, useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { useDark, useToggle } from '@vueuse/core'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
+const showSideBar = ref(false)
 const show = ref(false)
 const showLang = ref(false)
 
 const emit = defineEmits<{
   (e: 'on-click'): void
 }>()
-
-export interface IAppHeader {
-  elevated?: boolean
-}
-
-withDefaults(defineProps<IAppHeader>(), {
-  elevated: false
-})
 
 const router = useRouter()
 const { isLoggedIn } = useAuthStore()
@@ -376,7 +373,7 @@ const navigateLogin = () => {
 }
 
 const handleButtonClick = () => {
-  emit('on-click')
+  showSideBar.value = !showSideBar.value
 }
 
 const showProfile = () => {
@@ -384,37 +381,24 @@ const showProfile = () => {
 }
 
 const showLanguage = () => {
-  showLang.value = !showLang.value
-}
-
-const clickOutSide = () => {
-  show.value = false
-  showLang.value = false
+  show.value = !show.value
 }
 </script>
 
-<style module lang="scss">
+<style lang="scss">
+
 .parentHeader {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
-
-  @include breakpoint('md') {
-    padding: 20px;
-    justify-content: space-between;
-  }
-
-  @include breakpoint('lg') {
-    padding: 20px 30px 30px 130px;
-    justify-content: space-between;
-  }
 }
 
 .menu {
   display: block;
   margin-right: 8px;
 
-  @include breakpoint('lg') {
+  @include breakpoint('md') {
     display: none;
   }
   &:hover {
@@ -429,13 +413,13 @@ const clickOutSide = () => {
   color: $color-blue;
   cursor: pointer;
 
-  @include breakpoint('md') {
-  }
-
   @include breakpoint('lg') {
     font-size: 24px;
     line-height: 36px;
   }
+}
+.headerLeft {
+  display: flex;
 }
 
 .headerRight {
@@ -443,6 +427,10 @@ const clickOutSide = () => {
   align-items: center;
   gap: 10px;
   margin-left: -100px;
+
+  @include breakpoint('md') {
+    margin-left: 0;
+  }
 
   @include breakpoint('lg') {
     gap: 20px;

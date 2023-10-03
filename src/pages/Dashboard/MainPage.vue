@@ -124,26 +124,26 @@
     <div></div>
   </div>
 
-  <div class="charts">
-    <div>
-      <div style="margin-bottom: 15px" class="box-card">
-        <apexchart height="237" type="bar" :options="options" :series="series"></apexchart>
-      </div>
+  <el-row class="" gutter="20">
+    <el-col :span="7" :xs="24" :lg="7" :sm="24">
+      <el-card style="margin-bottom: 15px" class="box-card">
+        <apexchart height="327" type="bar" :options="options" :series="series"></apexchart>
+      </el-card>
 
       <div class="box-card">
         <div class="chart__title">ARIZALAR</div>
         <apexchart
-          height="270"
+          height="590"
           type="bar"
           :options="arizaOptions"
           :series="arizaSeries"
         ></apexchart>
       </div>
-    </div>
+    </el-col>
 
-    <div>
-      <div style="display: flex; justify-content: center; align-items: center">
-        <img style="width: 280px" src="@/assets/chart/chart.png" />
+    <el-col :span="10" :xs="24" :lg="10" :sm="24">
+      <div class="chart-img">
+        <img src="@/assets/chart/chart.png" />
       </div>
 
       <div>
@@ -172,10 +172,10 @@
         </div>
 
         <div>
-          <div class="box-card">
+          <div style="margin-bottom: 10px" class="box-card">
             <div class="chart__title">Shartnomalar</div>
             <apexchart
-              height="300"
+              height="400"
               type="bar"
               :options="shartnomalarOptions"
               :series="shartnomalarSeries"
@@ -183,14 +183,14 @@
           </div>
         </div>
       </div>
-    </div>
+    </el-col>
 
-    <div>
+    <el-col :span="7" :xs="24" :lg="7" :sm="24">
       <div style="margin-bottom: 15px" class="box-card">
         <div class="chart__title">SHArtnoma turi bo’yicha</div>
 
         <apexchart
-          height="190"
+          height="540"
           type="bar"
           :options="shartnomaTuriOptions"
           :series="shartnomaTuriSeries"
@@ -201,7 +201,7 @@
         <div class="chart__title">Sertifikatlar</div>
 
         <apexchart
-          height="290"
+          height="400"
           type="donut"
           :options="donutOptions"
           :series="donutSeries"
@@ -217,8 +217,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </el-col>
+  </el-row>
 </template>
 
 <script setup lang="ts">
@@ -229,7 +229,7 @@ const activetab = ref('1')
 const options = reactive({
   chart: {
     type: 'candlestick',
-    height: 350
+    height: 198
   },
   title: {
     align: 'left'
@@ -262,14 +262,14 @@ const options = reactive({
 
 const series = reactive([
   {
-    data: [30, 40, 35, 50, 29, 60, 47, 40, 35, 50, 29, 60, 47, 51]
+    data: [30, 40, 35, 50, 29, 60, 47, 40, 35, 50, 29, 60, 47, 31]
   }
 ])
 
 const arizaOptions = reactive({
   chart: {
     type: 'candlestick',
-    height: 580
+    height: 443
   },
   title: {
     align: 'left'
@@ -283,7 +283,7 @@ const arizaOptions = reactive({
       'Sertifikat ​berilgan'
     ]
   },
-  colors: ['#2364AA'],
+  colors: ['#004E89'],
   yaxis: {
     tooltip: {
       enabled: true
@@ -300,7 +300,7 @@ const arizaSeries = reactive([
 const shartnomalarOptions = reactive({
   chart: {
     type: 'candlestick',
-    height: 580
+    height: 301
   },
   title: {
     align: 'left'
@@ -332,7 +332,7 @@ const shartnomalarSeries = reactive([
 const shartnomaTuriOptions = reactive({
   chart: {
     type: 'candlestick',
-    height: 580
+    height: 357
   },
   title: {
     align: 'left'
@@ -351,22 +351,22 @@ const shartnomaTuriOptions = reactive({
 const shartnomaTuriSeries = reactive([
   {
     name: 'Ariza',
-    data: [51, 52, 90]
+    data: [51, 37, 38]
   },
   {
     name: 'Shartnoma',
-    data: [28, 45, 75]
+    data: [52, 28, 31]
   },
   {
     name: 'Sertifikat',
-    data: [68, 45, 75]
+    data: [90, 15, 64]
   }
 ])
 
 const donutOptions = {
   type: 'pie',
   chart: {
-    height: 400
+    height: 300
   },
   legend: {
     display: false,
@@ -377,17 +377,17 @@ const donutOptions = {
 
   responsive: [
     {
-      breakpoint: 480,
+      breakpoint: 280,
       options: {
         chart: {
-          height: 400
+          height: 300
         }
       }
     }
   ]
 }
 
-const donutSeries = [44, 55]
+const donutSeries = [39, 61]
 </script>
 
 <style lang="scss">
@@ -463,7 +463,16 @@ const donutSeries = [44, 55]
   }
 }
 
-.tabs {
+.chart-img {
+  display: grid;
+  justify-content: center;
+  margin-top: 190px;
+
+  img {
+    width: 250px;
+    height: 244px;
+    margin-bottom: 90px;
+  }
 }
 
 .tab {
@@ -501,44 +510,17 @@ const donutSeries = [44, 55]
   color: $color-white;
 }
 
-.charts {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  gap: 15px;
-
-  @include breakpoint('lg') {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include breakpoint('xl') {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .apexcharts-menu-icon {
   display: none;
 }
 
 .box-card {
-  width: 330px;
+  width: 100%;
   padding: 22px;
   border-radius: 10px;
   background: $color-white;
   font-family: $base-font;
   color: #151f4a;
-
-  @include breakpoint('md') {
-    width: 100%;
-  }
-
-  @include breakpoint('lg') {
-    width: 336px;
-  }
-
-  @include breakpoint('xxl') {
-    width: 100%;
-  }
 
   &__title {
     font-weight: 700;

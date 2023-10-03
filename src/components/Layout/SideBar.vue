@@ -120,6 +120,7 @@ const links = ref<IProfileSidemenuLink[]>([
   background: #cecece;
   z-index: 99999;
   position: fixed;
+  left: 0;
   display: grid;
   flex-direction: column;
   padding-left: 13px;
