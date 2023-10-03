@@ -38,6 +38,7 @@ import { ref } from 'vue'
 const visible = ref(false)
 
 const addMenuClick = () => {
+  console.log('working')
   visible.value = !visible.value
 }
 </script>
