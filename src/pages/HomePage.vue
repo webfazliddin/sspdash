@@ -3,7 +3,7 @@
     <el-container>
       <el-aside width="100px" class="main-sidebar"><SideBar /></el-aside>
       <el-container>
-        <el-header><AppHeader /></el-header>
+        <el-header class="main-header"><AppHeader /></el-header>
         <el-main> <RouterView /></el-main>
       </el-container>
     </el-container>
@@ -21,9 +21,13 @@
 .main-sidebar {
   display: none;
 
-  @include breakpoint('md') {
+  @include breakpoint('lg') {
     display: block;
   }
+}
+
+.el-header {
+  // --el-header-height: 89px !important;
 }
 </style>
 

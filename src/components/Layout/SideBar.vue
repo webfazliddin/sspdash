@@ -137,6 +137,7 @@ const links = ref<IProfileSidemenuLink[]>([
   &__logo {
     img {
       width: 60px;
+      margin-top: 10px;
     }
     &--title {
       font-family: $base-font;
