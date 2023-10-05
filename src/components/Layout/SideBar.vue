@@ -132,6 +132,9 @@ const links = ref<IProfileSidemenuLink[]>([
     .sideBar__items--title {
       display: block;
     }
+    .sideBar__logo--title {
+      display: block;
+    }
   }
 
   &__logo {
