@@ -9,7 +9,7 @@
 
 <style>
 .dark {
-  background: #000 !important;
+  /* background: #232633 !important; */
   color: #fff;
 } 
 </style>

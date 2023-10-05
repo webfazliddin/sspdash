@@ -11,6 +11,7 @@ import BaseRoundedButton from "@/components/Base/BaseRoundedButton.vue";
 import BaseSpinner from "@/components/Base/BaseSpinner.vue";
 import BaseInput from "@/components/Base/BaseInput.vue";
 import CategoryCard from "./Card/CategoryCard.vue";
+import AzolikCategoryCard from "./Card/Azolik/AzolikCategoryCard.vue";
 
 export default {
   install(app: App): void {
@@ -23,6 +24,7 @@ export default {
     app.component("BaseSpinner", BaseSpinner);
     app.component("BaseInput", BaseInput);
     app.component("CategoryCard", CategoryCard);
+    app.component("AzolikCategoryCard", AzolikCategoryCard);
 
     app.component("AppHeader", AppHeader);
     app.component("SideBar", SideBar);

@@ -108,7 +108,7 @@ const links = ref<IProfileSidemenuLink[]>([
     title: 'Kadr',
     url: '/home/kadr',
     image:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" fill="none" > <circle cx="11.4387" cy="7.70408" r="6.37071" stroke="#2364AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.3334 22.9352C1.33168 22.4873 1.43184 22.0449 1.6263 21.6415C2.23652 20.4211 3.95735 19.7742 5.38526 19.4813C6.41508 19.2615 7.45911 19.1147 8.5096 19.042C10.4545 18.8711 12.4106 18.8711 14.3555 19.042C15.4059 19.1156 16.4499 19.2624 17.4798 19.4813C18.9078 19.7742 20.6286 20.36 21.2388 21.6415C21.6299 22.4639 21.6299 23.4186 21.2388 24.241C20.6286 25.5225 18.9078 26.1083 17.4798 26.389C16.4512 26.6179 15.4068 26.7688 14.3555 26.8406C12.7725 26.9748 11.1822 26.9992 9.59579 26.9138C9.22966 26.9138 8.87573 26.9138 8.5096 26.8406C7.46222 26.7697 6.4218 26.6187 5.39747 26.389C3.95735 26.1083 2.24873 25.5225 1.6263 24.241C1.43284 23.8329 1.33278 23.3868 1.3334 22.9352Z" stroke="#2364AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /> </svg>'
+      '<svg xmlns="http://www.w3.org/2000/svg" width="23" height="28" viewBox="0 0 23 28" fill="none"> <circle cx="11.4386" cy="7.70408" r="6.37071" stroke="#2364AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33327 22.9352C1.33156 22.4873 1.43172 22.0449 1.62618 21.6415C2.2364 20.4211 3.95722 19.7742 5.38514 19.4813C6.41496 19.2615 7.45899 19.1147 8.50948 19.042C10.4544 18.8711 12.4105 18.8711 14.3554 19.042C15.4058 19.1156 16.4498 19.2624 17.4797 19.4813C18.9076 19.7742 20.6285 20.36 21.2387 21.6415C21.6297 22.4639 21.6297 23.4186 21.2387 24.241C20.6285 25.5225 18.9076 26.1083 17.4797 26.389C16.4511 26.6179 15.4067 26.7688 14.3554 26.8406C12.7724 26.9748 11.182 26.9992 9.59567 26.9138C9.22954 26.9138 8.87561 26.9138 8.50948 26.8406C7.46209 26.7697 6.42168 26.6187 5.39735 26.389C3.95722 26.1083 2.24861 25.5225 1.62618 24.241C1.43272 23.8329 1.33265 23.3868 1.33327 22.9352Z" stroke="#2364AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
   }
 ])
 </script>
@@ -168,7 +168,10 @@ const links = ref<IProfileSidemenuLink[]>([
     }
 
     &:hover {
-      svg path {
+      svg circle {
+        stroke: white;
+      }
+      path {
         stroke: #fff !important;
       }
       .sideBar__item {
@@ -214,7 +217,10 @@ const links = ref<IProfileSidemenuLink[]>([
 
 .sideBar__items.active {
   .sideBar__items {
-    svg path {
+    svg circle {
+      stroke: white;
+    }
+    path {
       stroke: #fff !important;
     }
     .sideBar__item {

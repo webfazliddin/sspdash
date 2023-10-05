@@ -17,6 +17,9 @@
   background-size: cover;
   height: 100%;
 }
+// .dark {
+//   background: #232633;
+// }
 
 .main-sidebar {
   display: none;
@@ -24,10 +27,6 @@
   @include breakpoint('lg') {
     display: block;
   }
-}
-
-.el-header {
-  // --el-header-height: 89px !important;
 }
 </style>
 

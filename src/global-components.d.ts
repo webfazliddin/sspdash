@@ -9,6 +9,7 @@ import BaseRoundedButton from "@/components/Base/BaseRoundedButton.vue"
 import AppHeader from "@/components/Layout/AppHeader.vue";
 import LoginHomePageVue from "./pages/Auth/LoginHomePage.vue";
 import CategoryCard from "./components/Card/CategoryCard.vue"
+import AzolikCategoryCard from "./components/Card/Azolik/AzolikCategoryCard.vue"
 import SideBar from "./components/Layout/SideBar.vue"
 
 
@@ -23,6 +24,7 @@ declare module "@vue/runtime-core" {
     
     // Layout components
     CategoryCard: typeof CategoryCard;
+    AzolikCategoryCard: typeof AzolikCategoryCard;
     AppHeader: typeof AppHeader;
     LoginHomePageVue: typeof LoginHomePageVue;
     SideBar: typeof SideBar;
