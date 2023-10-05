@@ -74,7 +74,16 @@
 <style lang="scss">
 .azolikCategoryCard {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+
   gap: 20px;
+ 
+  @include breakpoint('md') {
+  grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include breakpoint('lg') {
+  grid-template-columns: repeat(7, 1fr);
+  }
 }
 </style>
