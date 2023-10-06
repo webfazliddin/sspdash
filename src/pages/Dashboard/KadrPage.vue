@@ -317,6 +317,7 @@ const oliyMalumotSeries = [25, 75]
 .azolikCategoryCard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 20px;
 
   gap: 20px;
 
