@@ -704,11 +704,11 @@
 import { defineEmits, defineProps, ref } from 'vue'
 import { useAuthStore } from '@/stores/authStore'
 import { useRouter } from 'vue-router'
-import { useDark, useToggle, useColorMode  } from '@vueuse/core'
+import { useDark, useToggle, useColorMode } from '@vueuse/core'
 
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
-const colorMode = useColorMode();
+const colorMode = useColorMode()
 
 const drawer = ref(false)
 const showSideBar = ref(false)
@@ -735,7 +735,7 @@ const showProfile = () => {
 }
 
 const showLanguage = () => {
-  show.value = !show.value
+  showLang.value = !showLang.value
 }
 </script>
 

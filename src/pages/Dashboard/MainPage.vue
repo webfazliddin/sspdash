@@ -124,7 +124,7 @@
     <div></div>
   </div>
 
-  <el-row class="" gutter="20">
+  <el-row gutter="20">
     <el-col :span="7" :xs="24" :lg="7" :sm="24">
       <el-card style="margin-bottom: 15px" class="box-card">
         <apexchart height="327" type="bar" :options="options" :series="series"></apexchart>

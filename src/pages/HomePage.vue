@@ -17,9 +17,6 @@
   background-size: cover;
   height: 100%;
 }
-// .dark {
-//   background: #232633;
-// }
 
 .main-sidebar {
   display: none;
@@ -29,5 +26,3 @@
   }
 }
 </style>
-
-
