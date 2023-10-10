@@ -83,7 +83,7 @@
         </div>
       </div>
 
-      <div class="box-card">
+      <el-card class="box-card">
         <apexchart type="donut" :options="donutOptions" :series="donutSeries"></apexchart>
         <div class="series">
           <div class="series__item">
@@ -95,15 +95,21 @@
             <div class="series__item--title">Ayol xodimlar</div>
           </div>
         </div>
-      </div>
+      </el-card>
 
-      <div class="box-card">
+      <el-card class="box-card">
         <div>
-          <apexchart type="donut" :options="ageOptions" :series="ageSeries"></apexchart>
+          <apexchart
+            width="350"
+            height="350"
+            type="donut"
+            :options="ageOptions"
+            :series="ageSeries"
+          ></apexchart>
         </div>
-      </div>
+      </el-card>
 
-      <div class="box-card">
+      <el-card class="box-card">
         <div class="oliyMalumotliChart">
           <div style="display: flex">
             <apexchart
@@ -216,7 +222,7 @@
             <div class="series__item--title">Ayol xodimlar</div>
           </div>
         </div>
-      </div>
+      </el-card>
     </el-col>
 
     <el-col :span="10" :xs="24" :lg="10" :sm="24">
@@ -235,7 +241,7 @@
         </div>
       </div>
 
-      <div class="data-table">
+      <el-card class="data-table">
         <div class="tbody">Shtatlar birligi - 7</div>
         <div class="thParent">
           <div class="th border-r">Lavozim</div>
@@ -290,9 +296,9 @@
           <div class="td border-r" style="color: #27ae60">Bandligi: 3</div>
           <div class="td" style="color: #eb5757">Vakant: 4</div>
         </div>
-      </div>
+      </el-card>
 
-      <div class="data-table">
+      <el-card class="data-table">
         <div class="tbody">Kadrlar harakatga doir buyruqlar bo’yicha ma’lumot</div>
         <div class="tdParent border-t">
           <div class="td border-r">Mehnat ta’tilda</div>
@@ -344,7 +350,7 @@
             <div class="serias-table__item--title">Ayol xodimlar</div>
           </div>
         </div>
-      </div>
+      </el-card>
     </el-col>
 
     <el-col :span="7" :xs="24" :lg="7" :sm="24">
@@ -359,7 +365,7 @@
         </div>
       </div>
 
-      <div class="box-card">
+      <el-card class="box-card">
         <div class="chart__title">Ish staji bo’yicha</div>
         <apexchart
           height="300"
@@ -367,9 +373,9 @@
           :options="ishStajiOptions"
           :series="ishStajiSeries"
         ></apexchart>
-      </div>
+      </el-card>
 
-      <div class="box-card">
+      <el-card class="box-card">
         <div style="display: flex">
           <apexchart
             type="donut"
@@ -530,9 +536,9 @@
             <div class="oquvTuri-serias__title">Bakalavr</div>
           </div>
         </div>
-      </div>
+      </el-card>
 
-      <div class="box-card">
+      <el-card class="box-card">
         <div class="chart__title" style="margin-bottom: 18px">
           Yuridik ma’lumotlarga ega bo’lgan xodimlar
         </div>
@@ -588,13 +594,13 @@
           <div class="titleManOrWomen">Ayol xodimlar</div>
           <div>20</div>
         </div>
-      </div>
+      </el-card>
     </el-col>
   </el-row>
 
   <el-row gutter="20">
     <el-col :span="12" :xs="24" :lg="12" :sm="24">
-      <div class="data-table">
+      <el-card class="data-table">
         <div class="tHolidayDate">
           <div class="tbody">Tavallud ayyomlar</div>
           <div class="tdate">Bugungi sana: 25.09.2023</div>
@@ -667,11 +673,11 @@
             <div>30.09.2023 da tavallud ayyomini nishonlaydi</div>
           </div>
         </div>
-      </div>
+      </el-card>
     </el-col>
 
     <el-col :span="12" :xs="24" :lg="12" :sm="24">
-      <div class="data-table">
+      <el-card class="data-table">
         <div class="tHolidayDate">
           <div class="tbody">Tadbir va yangiliklar</div>
           <div class="tdate">Bugungi sana: 25.09.2023</div>
@@ -763,7 +769,7 @@
             <div>02.10.2023 mehnat ta`tiliga chiqish kuni</div>
           </div>
         </div>
-      </div>
+      </el-card>
     </el-col>
   </el-row>
 </template>
@@ -773,35 +779,19 @@ import { reactive } from 'vue'
 
 const donutOptions = {
   type: 'pie',
-  chart: {
-    height: 300
-  },
   legend: {
     display: false,
     show: false
   },
   plugins: {},
-  colors: ['#02C39A', '#004E89'],
-
-  responsive: [
-    {
-      breakpoint: 280,
-      options: {
-        chart: {
-          height: 300
-        }
-      }
-    }
-  ]
+  colors: ['#02C39A', '#004E89']
 }
 
 const donutSeries = [61, 39]
 
 const ageOptions = {
   type: 'pie',
-  chart: {
-    height: 300
-  },
+
   series: [
     {
       name: '20 yoshgacha',
@@ -809,55 +799,26 @@ const ageOptions = {
     }
   ],
   labels: ['20 yoshgacha', '20 dan 30 yoshgacha', '30 dan 40 yoshgacha', '40 yoshdan kattalar'],
-  colors: ['#FDE802', '#FF9B9E', '#02C11A', '#7367F0'],
-
-  responsive: [
-    {
-      breakpoint: 280,
-      options: {
-        chart: {
-          height: 300
-        }
-      }
-    }
-  ]
+  colors: ['#FDE802', '#FF9B9E', '#02C11A', '#7367F0']
 }
 
 const ageSeries = [72, 14, 28, 36]
 
 const oliyMalumotOptions = {
   type: 'pie',
-  chart: {
-    height: 240,
-    width: 140
-  },
   legend: {
     display: true,
     show: false
   },
 
-  colors: ['#28DAC6', '#7367F0'],
-
-  responsive: [
-    {
-      breakpoint: 140,
-      options: {
-        chart: {
-          height: 142
-        }
-      }
-    }
-  ]
+  colors: ['#28DAC6', '#7367F0']
 }
 
 const oliyMalumotSeries = [25, 75]
 //third column
 
 const ishStajiOptions = reactive({
-  chart: {
-    type: 'candlestick',
-    height: 301
-  },
+  type: 'pie',
   title: {
     align: 'left'
   },
@@ -892,6 +853,9 @@ const bakalavrMagistrSeries = [25, 50, 25]
 </script>
 
 <style lang="scss">
+.el-card__body {
+  padding: 0 !important;
+}
 .azolikCategoryCard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1071,16 +1035,13 @@ select {
     @include breakpoint('lg') {
       width: 550px;
     }
-    @include breakpoint('xl') {
-      width: 100%;
-    }
   }
 }
 
 .data-table {
+  border-radius: 16px;
   border: 1px solid #cecece;
   margin-bottom: 20px;
-  border-radius: 16px;
 }
 
 .tbody {
@@ -1090,7 +1051,6 @@ select {
   letter-spacing: 0.3px;
   text-transform: uppercase;
   padding: 5px 27px;
-  background: #fff;
   color: #393d52;
 }
 .thParent {
@@ -1117,7 +1077,6 @@ select {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.3px;
-  background: #fff;
   color: #000;
 }
 
@@ -1126,7 +1085,6 @@ select {
   align-items: center;
   grid-template-columns: 1fr 2fr;
   font-family: $base-font;
-  background: #fff;
   font-weight: 400;
   letter-spacing: 0.3px;
   font-size: 14px;
@@ -1138,7 +1096,6 @@ select {
   align-items: center;
   grid-template-columns: 1fr 1fr;
   font-family: $base-font;
-  background: #fff;
   font-weight: 400;
   letter-spacing: 0.3px;
   font-size: 14px;
@@ -1209,7 +1166,6 @@ select {
   gap: 15px;
   align-items: center;
   padding: 0 10px;
-  background: #fff;
   font-family: $base-font;
   overflow: auto;
 }
@@ -1218,7 +1174,6 @@ select {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
   padding-right: 20px;
 }
 
