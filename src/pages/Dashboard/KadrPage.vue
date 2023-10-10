@@ -218,7 +218,135 @@
         </div>
       </div>
     </el-col>
-    <el-col :span="10" :xs="24" :lg="10" :sm="24"> </el-col>
+
+    <el-col :span="10" :xs="24" :lg="10" :sm="24">
+      <div class="uzb-map">
+        <img src="../../assets/chart/chart.png" />
+      </div>
+
+      <div class="select-azolik">
+        <div class="label">Shartlar hisobi</div>
+        <div>
+          <select>
+            <option>Rahbariyat</option>
+            <option>Quyidagilardan tanlang ...</option>
+            <option>Quyidagilardan tanlang ...</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="data-table">
+        <div class="tbody">Shtatlar birligi - 7</div>
+        <div class="thParent">
+          <div class="th border-r">Lavozim</div>
+          <div class="th border-r">F.I.Sh</div>
+          <div class="th">Bandligi</div>
+        </div>
+
+        <div class="tdParent">
+          <div class="td border-r">Rais</div>
+          <div class="td border-r">
+            <a href="#" class="link-border-b" style="color: #2364aa"
+              >Vaxabov Davron Abdujalolovich</a
+            >
+          </div>
+          <div class="td" style="color: #27ae60">Ish joyida</div>
+        </div>
+
+        <div class="tdParent border-t">
+          <div class="td border-r">Raisning birinchi o’rinbosari</div>
+          <div class="td border-r">
+            <a href="#" class="link-border-b" style="color: #2364aa">Djasimov Islam Kazimovich</a>
+          </div>
+          <div class="td">20.09.2023 dan 30.09.2023 gacham mehnat ta’tilida</div>
+        </div>
+
+        <div class="tdParentRow2 border-t">
+          <div class="td border-r">Raisning birinchi o’rinbosari</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">Vakant</div>
+        </div>
+
+        <div class="tdParent border-t">
+          <div class="td border-r">Raisning o’rinbosari</div>
+          <div class="td border-r">
+            <a href="#" class="link-border-b" style="color: #2364aa">Urakov Djamshed Rajabovich</a>
+          </div>
+          <div class="td" style="color: #27ae60">
+            Ish joyida <span style="color: #eb5757">9 min kechikdi</span>
+          </div>
+        </div>
+
+        <div class="tdParentRow2 border-t">
+          <div class="td border-r">Raisning birinchi o’rinbosari</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">Vakant</div>
+        </div>
+
+        <div class="tdParentRow2 border-t">
+          <div class="td border-r">Raisning birinchi o’rinbosari</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">Vakant</div>
+        </div>
+
+        <div class="tdParentTotal border-t">
+          <div class="td border-r" style="color: #27ae60">Bandligi: 3</div>
+          <div class="td" style="color: #eb5757">Vakant: 4</div>
+        </div>
+      </div>
+
+      <div class="data-table">
+        <div class="tbody">Kadrlar harakatga doir buyruqlar bo’yicha ma’lumot</div>
+        <div class="tdParent border-t">
+          <div class="td border-r">Mehnat ta’tilda</div>
+          <div class="td border-r" style="background: rgba(35, 100, 170, 0.2)">20</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">10</div>
+        </div>
+
+        <div class="tdParent border-t">
+          <div class="td border-r">O’z hisobidan ta’tilda</div>
+          <div class="td border-r" style="background: rgba(35, 100, 170, 0.2)">20</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)"></div>
+        </div>
+
+        <div class="tdParentRow2 border-t">
+          <div class="td border-r">Dikret ta’tilda</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">10</div>
+        </div>
+
+        <div class="tdParentRow2 border-t">
+          <div class="td border-r">Bola parvarishi ta’tilida</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">5</div>
+        </div>
+
+        <div class="tdParent border-t">
+          <div class="td border-r">O’qish ta’tilida</div>
+          <div class="td border-r" style="background: rgba(35, 100, 170, 0.2)">30</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">5</div>
+        </div>
+
+        <div class="tdParent border-t">
+          <div class="td border-r">Malaka oshirishda</div>
+          <div class="td border-r" style="background: rgba(35, 100, 170, 0.2)">40</div>
+          <div class="td" style="background: rgba(235, 87, 87, 0.2)">5</div>
+        </div>
+
+        <div class="tdParentRow2 border-t">
+          <div class="td border-r">Xizmat safarida</div>
+          <div class="td" style="background: rgba(40, 199, 111, 0.2)">Mavjud emas</div>
+        </div>
+
+        <div class="serias-table border-t">
+          <div class="serias-table__item">
+            <div class="serias-table__item--round"></div>
+            <div class="serias-table__item--title">Erkak xodimlar</div>
+          </div>
+
+          <div class="serias-table__item">
+            <div class="serias-table__item--round2"></div>
+            <div class="serias-table__item--title">Ayol xodimlar</div>
+          </div>
+        </div>
+      </div>
+    </el-col>
+
     <el-col :span="7" :xs="24" :lg="7" :sm="24">
       <div class="select-azolik">
         <div class="label">O’zbekiston Respublikasi Savdo-Sanoat Palatasi</div>
@@ -242,21 +370,20 @@
       </div>
 
       <div class="box-card">
-        <div style="display: flex;">
+        <div style="display: flex">
           <apexchart
-          height="200"
             type="donut"
             :options="bakalavrMagistrOptions"
             :series="bakalavrMagistrSeries"
           ></apexchart>
 
-          <div style="width: 180px;">
+          <div style="width: 180px">
             <div class="oliyMalumotliTitle">umumiy soni: 100</div>
-            <div style="display: flex;">
+            <div style="display: flex">
               <div>
-                <div style="margin-bottom: 20px; font-size: 14px;">Phd:</div>
-                <div style="margin-bottom: 20px; font-size: 14px;">Magistratura:</div>
-                <div style="font-size: 14px;">Bakalavr:</div>
+                <div style="margin-bottom: 20px; font-size: 14px">Phd:</div>
+                <div style="margin-bottom: 20px; font-size: 14px">Magistratura:</div>
+                <div style="font-size: 14px">Bakalavr:</div>
               </div>
               <div>
                 <div class="chart__right--title">
@@ -401,6 +528,239 @@
           <div class="oquvTuri-serias__item">
             <div class="oquvTuri-serias__item--bakalavr"></div>
             <div class="oquvTuri-serias__title">Bakalavr</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-card">
+        <div class="chart__title" style="margin-bottom: 18px">
+          Yuridik ma’lumotlarga ega bo’lgan xodimlar
+        </div>
+        <div class="yuridikMalumot">
+          <div class="yuridikMalumot__man">
+            <div style="margin-bottom: 5px">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_878_1222)">
+                  <path
+                    d="M19.9998 8.00005C20.5252 7.99992 21.0455 7.8963 21.5309 7.69511C22.0162 7.49392 22.4572 7.19909 22.8287 6.82747C23.2001 6.45585 23.4947 6.01471 23.6957 5.52924C23.8966 5.04377 24 4.52347 23.9998 3.99805C23.9997 3.47263 23.8961 2.95238 23.6949 2.46701C23.4937 1.98163 23.1989 1.54064 22.8273 1.16921C22.4556 0.797771 22.0145 0.50317 21.529 0.302222C21.0435 0.101275 20.5232 -0.00208433 19.9978 -0.001953C18.9367 -0.00168777 17.9191 0.420099 17.169 1.17062C16.4188 1.92114 15.9976 2.93892 15.9978 4.00005C15.9981 5.06118 16.4199 6.07874 17.1704 6.82889C17.9209 7.57903 18.9387 8.00031 19.9998 8.00005ZM31.9558 23.166C31.1858 19.616 29.8398 13.79 27.8718 11.378C25.9578 9.03205 22.1018 8.93405 19.9998 8.93405C17.8978 8.93405 14.0418 9.03205 12.1278 11.378C10.1598 13.79 8.81383 19.616 8.04383 23.166C7.61783 25.132 10.3518 25.854 11.0658 23.876C12.1278 20.93 12.9478 18.456 14.7438 16.404C15.6878 22.218 12.2038 32.336 11.9998 38C11.9995 38.4676 12.163 38.9205 12.4618 39.28C12.7607 39.6395 13.1761 39.883 13.6358 39.9681C14.0955 40.0532 14.5705 39.9745 14.9783 39.7458C15.3861 39.5171 15.7008 39.1527 15.8678 38.716C16.7818 35.542 19.9998 26.71 19.9998 26.71C19.9998 26.71 23.2178 35.542 24.1318 38.716C24.2989 39.1527 24.6136 39.5171 25.0214 39.7458C25.4291 39.9745 25.9041 40.0532 26.3639 39.9681C26.8236 39.883 27.239 39.6395 27.5378 39.28C27.8367 38.9205 28.0002 38.4676 27.9998 38C27.7958 32.336 24.3118 22.218 25.2558 16.406C27.0518 18.458 27.8718 20.932 28.9338 23.878C29.6458 25.854 32.3818 25.132 31.9558 23.166Z"
+                    fill="#393D52"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_878_1222">
+                    <rect width="40" height="40" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <div class="titleManOrWomen">70%</div>
+          </div>
+          <div class="titleManOrWomen">Erkak xodimlar</div>
+          <div>20</div>
+        </div>
+
+        <div class="yuridikMalumot">
+          <div class="yuridikMalumot__man">
+            <div style="margin-bottom: 5px">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24.4998 4.51265C24.4998 7.00494 22.4852 9.0253 20 9.0253C17.5149 9.0253 15.5002 7.00494 15.5002 4.51265C15.5002 2.02038 17.5149 0 20 0C22.4852 0 24.4998 2.02038 24.4998 4.51265ZM14.5002 17.0478C14.5002 19.5855 12.1645 28.124 11.3093 31.1652C11.1463 31.7448 11.5247 32.3377 12.1186 32.4273C18.1055 33.3303 21.8989 33.3006 27.8852 32.4214C28.4778 32.3344 28.8597 31.7482 28.7017 31.1689C27.8561 28.0685 25.5022 19.2415 25.4997 17.0512V17.0478V15.5384C25.8973 16.0405 26.2685 16.7872 26.4965 17.5945L26.5185 17.672C26.6576 18.1645 26.7099 18.3496 26.7591 18.5357C26.7887 18.6478 26.8172 18.7601 26.8629 18.9401C26.9915 19.447 27.2562 20.4905 28.0655 23.5751C28.3466 24.6463 29.4404 25.2862 30.5085 25.0042C31.5767 24.7223 32.2148 23.6254 31.9337 22.5542C31.1637 19.6201 30.8899 18.5436 30.7492 17.9904C30.6049 17.4233 30.6006 17.4064 30.3449 16.5011C30.0002 15.2811 29.4132 14.0253 28.6207 13.0295C27.8729 12.0898 26.6477 11.0309 24.9998 11.0309H20H15.0002C13.3523 11.0309 12.1271 12.0898 11.3792 13.0295C10.5868 14.0253 9.99969 15.2811 9.65511 16.5011C9.39932 17.4064 9.39502 17.4232 9.25082 17.9903C9.11013 18.5435 8.83634 19.6199 8.06637 22.5542C7.78519 23.6254 8.42326 24.7223 9.49141 25.0042C10.5596 25.2862 11.6533 24.6463 11.9345 23.5751C12.7439 20.4905 13.0086 19.447 13.1372 18.9401C13.1828 18.7601 13.2113 18.6477 13.241 18.5357C13.2901 18.3497 13.3425 18.1645 13.4815 17.6721L13.5034 17.5945C13.7315 16.7872 14.1026 16.0404 14.5002 15.5384V17.0478ZM14.5002 38.4956V34.6676C15.9096 34.877 17.2136 35.0092 18.4875 35.0662L17.4473 38.8914C17.2496 39.6185 16.5459 40.0866 15.801 39.9866C15.0563 39.8865 14.5002 39.2492 14.5002 38.4956ZM22.5528 38.8914L21.5107 35.0599C22.7853 34.9979 24.0898 34.8619 25.4997 34.6537V38.4956C25.4997 39.2492 24.9438 39.8865 24.1989 39.9866C23.4541 40.0866 22.7505 39.6185 22.5528 38.8914Z"
+                  fill="#393D52"
+                />
+              </svg>
+            </div>
+            <div class="titleManOrWomen">30%</div>
+          </div>
+          <div class="titleManOrWomen">Ayol xodimlar</div>
+          <div>20</div>
+        </div>
+      </div>
+    </el-col>
+  </el-row>
+
+  <el-row gutter="20">
+    <el-col :span="12" :xs="24" :lg="12" :sm="24">
+      <div class="data-table">
+        <div class="tHolidayDate">
+          <div class="tbody">Tavallud ayyomlar</div>
+          <div class="tdate">Bugungi sana: 25.09.2023</div>
+        </div>
+
+        <div class="tdHoliday border-t">
+          <div class="border-r" style="height: 100%; padding-right: 10px">
+            <img src="../../assets/kadr-page/avatar.png" />
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <div class="td">Berdiev Ulug’bek Ibrohimovich</div>
+            <div class="tdate">25.09.1980</div>
+          </div>
+          <div class="tdHolidayRight border-l">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="18"
+                viewBox="0 0 20 18"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.7141 0.44083L13.0301 5.09983C13.1461 5.33483 13.3701 5.49883 13.6301 5.53683L18.8151 6.28583C19.0251 6.31383 19.2141 6.42383 19.3431 6.59183C19.5851 6.90683 19.5481 7.35283 19.2581 7.62383L15.5001 11.2578C15.3091 11.4378 15.2241 11.7018 15.2741 11.9588L16.1741 17.0868C16.2371 17.5118 15.9471 17.9098 15.5221 17.9788C15.3461 18.0058 15.1661 17.9778 15.0061 17.8988L10.3881 15.4778C10.1561 15.3518 9.87813 15.3518 9.64613 15.4778L4.99413 17.9118C4.60513 18.1098 4.12913 17.9628 3.91713 17.5818C3.83613 17.4278 3.80813 17.2528 3.83613 17.0818L4.73613 11.9538C4.78113 11.6978 4.69613 11.4348 4.51013 11.2538L0.732129 7.62083C0.424129 7.31483 0.422129 6.81683 0.729129 6.50883C0.730129 6.50783 0.731129 6.50583 0.732129 6.50483C0.859129 6.38983 1.01513 6.31283 1.18413 6.28283L6.37013 5.53383C6.62913 5.49283 6.85213 5.33083 6.97013 5.09583L9.28413 0.44083C9.37713 0.25183 9.54213 0.10683 9.74213 0.0408302C9.94313 -0.0261698 10.1631 -0.0101698 10.3521 0.0848302C10.5071 0.16183 10.6341 0.28683 10.7141 0.44083Z"
+                  fill="#F2C94C"
+                />
+              </svg>
+            </div>
+            <div>Bugun tavallud ayyomini nishonlamoqda</div>
+          </div>
+        </div>
+
+        <div class="tdHoliday border-t">
+          <div class="border-r" style="height: 100%; padding-right: 10px">
+            <img src="../../assets/kadr-page/girl.png" />
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <div class="td">Xasanova Gavxar Toxtamurotovna</div>
+            <div class="tdate">25.09.1980</div>
+          </div>
+          <div class="tdHolidayRight border-l">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M19.25 10.0005C19.25 15.1095 15.109 19.2505 10 19.2505C4.891 19.2505 0.75 15.1095 0.75 10.0005C0.75 4.89149 4.891 0.750488 10 0.750488C15.109 0.750488 19.25 4.89149 19.25 10.0005Z"
+                  stroke="#2F80ED"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.4316 12.9429L9.66162 10.6939V5.84692"
+                  stroke="#2F80ED"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div>30.09.2023 da tavallud ayyomini nishonlaydi</div>
+          </div>
+        </div>
+      </div>
+    </el-col>
+
+    <el-col :span="12" :xs="24" :lg="12" :sm="24">
+      <div class="data-table">
+        <div class="tHolidayDate">
+          <div class="tbody">Tadbir va yangiliklar</div>
+          <div class="tdate">Bugungi sana: 25.09.2023</div>
+        </div>
+
+        <div class="tdHoliday border-t">
+          <div class="border-r" style="height: 100%; padding-right: 10px">
+            <img src="../../assets/kadr-page/avatar.png" />
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <div class="td">Dadaboev Sanjar Alievich</div>
+            <div class="tdate">25.09.1980</div>
+          </div>
+          <div class="tdHolidayRight border-l">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="19"
+                height="21"
+                viewBox="0 0 19 21"
+                fill="none"
+              >
+                <path
+                  d="M12.8125 10.0217H0.771484"
+                  stroke="#2F80ED"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.88477 7.10571L12.8128 10.0217L9.88477 12.9377"
+                  stroke="#2F80ED"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.50439 5.38897V4.45597C5.50439 2.42097 7.15339 0.771973 9.18939 0.771973H14.0734C16.1034 0.771973 17.7484 2.41697 17.7484 4.44697V15.587C17.7484 17.622 16.0984 19.272 14.0634 19.272H9.17839C7.14939 19.272 5.50439 17.626 5.50439 15.597V14.655"
+                  stroke="#2F80ED"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div>30.10.23 mehnat ta`tilidan qaytish kuni</div>
+          </div>
+        </div>
+        <div class="tdHoliday border-t">
+          <div class="border-r" style="height: 100%; padding-right: 10px">
+            <img src="../../assets/kadr-page/woman-avatar.png" />
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between">
+            <div class="td">Zakirova Janna Olimovna</div>
+            <div class="tdate">25.09.1980</div>
+          </div>
+          <div class="tdHolidayRight border-l">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <path
+                  d="M13.016 5.38948V4.45648C13.016 2.42148 11.366 0.771484 9.33097 0.771484H4.45597C2.42197 0.771484 0.771973 2.42148 0.771973 4.45648V15.5865C0.771973 17.6215 2.42197 19.2715 4.45597 19.2715H9.34097C11.37 19.2715 13.016 17.6265 13.016 15.5975V14.6545"
+                  stroke="#EB5757"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19.8096 10.0215H7.76855"
+                  stroke="#EB5757"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16.8813 7.1062L19.8093 10.0212L16.8813 12.9372"
+                  stroke="#EB5757"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div>02.10.2023 mehnat ta`tiliga chiqish kuni</div>
           </div>
         </div>
       </div>
@@ -573,7 +933,7 @@ select {
 
 .box-card {
   width: 100%;
-  padding: 22px;
+  padding: 20px;
   border-radius: 10px;
   background: $color-white;
   font-family: $base-font;
@@ -686,5 +1046,200 @@ select {
       background: #775da7;
     }
   }
+}
+
+.yuridikMalumot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  gap: 20px;
+  margin-bottom: 10px;
+
+  &__man {
+    text-align: center;
+  }
+}
+
+.uzb-map {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 300px;
+
+    @include breakpoint('lg') {
+      width: 550px;
+    }
+    @include breakpoint('xl') {
+      width: 100%;
+    }
+  }
+}
+
+.data-table {
+  border: 1px solid #cecece;
+  margin-bottom: 20px;
+  border-radius: 16px;
+}
+
+.tbody {
+  font-family: $base-font;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 5px 27px;
+  background: #fff;
+  color: #393d52;
+}
+.thParent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  background: #898e95;
+  font-family: $base-font;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: white;
+}
+.th {
+  padding: 10px 0;
+}
+
+.tdParent {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-family: $base-font;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  background: #fff;
+  color: #000;
+}
+
+.tdParentRow2 {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  font-family: $base-font;
+  background: #fff;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.tdParentTotal {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  font-family: $base-font;
+  background: #fff;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.link-border-b {
+  border-bottom: 1px solid #2364aa;
+}
+
+.td {
+  padding: 10px 0;
+  height: 100%;
+}
+
+.border-t {
+  border-top: 1px solid #cecece;
+}
+.border-r {
+  border-right: 1px solid #cecece;
+}
+.border-b {
+  border-bottom: 1px solid #cecece;
+}
+.border-l {
+  border-left: 1px solid #cecece;
+}
+
+.serias-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;
+  padding: 10px 0;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    &--round {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #d3e0ee;
+    }
+
+    &--round2 {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #fbdddd;
+    }
+
+    &--title {
+      color: #6e6b7b;
+      font-family: $base-font;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+.tdHoliday {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 15px;
+  align-items: center;
+  padding: 0 10px;
+  background: #fff;
+  font-family: $base-font;
+  overflow: auto;
+}
+
+.tHolidayDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding-right: 20px;
+}
+
+.tdate {
+  font-family: $base-font;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: #898e95;
+}
+
+.tdHolidayRight {
+  font-family: $base-font;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  height: 100%;
+  padding-left: 10px;
+}
+
+svg {
+  cursor: pointer;
 }
 </style>
