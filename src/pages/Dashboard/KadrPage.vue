@@ -84,7 +84,7 @@
       </div>
 
       <el-card class="box-card">
-        <apexchart type="donut" :options="donutOptions" :series="donutSeries"></apexchart>
+        <apexchart height="300" type="donut" :options="donutOptions" :series="donutSeries"></apexchart>
         <div class="series">
           <div class="series__item">
             <div class="series__item--round"></div>
@@ -99,24 +99,20 @@
 
       <el-card class="box-card">
         <div>
-          <apexchart
-            width="350"
-            height="350"
-            type="donut"
-            :options="ageOptions"
-            :series="ageSeries"
-          ></apexchart>
+          <apexchart width="350" type="donut" :options="ageOptions" :series="ageSeries"></apexchart>
         </div>
       </el-card>
 
       <el-card class="box-card">
         <div class="oliyMalumotliChart">
           <div style="display: flex">
-            <apexchart
-              type="donut"
-              :options="oliyMalumotOptions"
-              :series="oliyMalumotSeries"
-            ></apexchart>
+            <div>
+              <apexchart
+                type="donut"
+                :options="oliyMalumotOptions"
+                :series="oliyMalumotSeries"
+              ></apexchart>
+            </div>
 
             <div>
               <div style="margin-bottom: 31px">
@@ -818,7 +814,6 @@ const oliyMalumotSeries = [25, 75]
 //third column
 
 const ishStajiOptions = reactive({
-  type: 'pie',
   title: {
     align: 'left'
   },
