@@ -84,7 +84,12 @@
       </div>
 
       <el-card class="box-card">
-        <apexchart height="300" type="donut" :options="donutOptions" :series="donutSeries"></apexchart>
+        <apexchart
+          height="300"
+          type="donut"
+          :options="donutOptions"
+          :series="donutSeries"
+        ></apexchart>
         <div class="series">
           <div class="series__item">
             <div class="series__item--round"></div>

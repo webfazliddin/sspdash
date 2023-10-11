@@ -115,7 +115,7 @@ const links = ref<IProfileSidemenuLink[]>([
 
 <style lang="scss">
 .sideBar {
-  width: 100px;
+  width: 70%;
   height: 100%;
   background: #cecece;
   z-index: 99999;
@@ -126,14 +126,30 @@ const links = ref<IProfileSidemenuLink[]>([
   padding-left: 13px;
   grid-template-rows: 1fr 2fr 1fr;
 
-  &:hover {
-    width: 290px;
+  .sideBar__items--title {
+    display: block;
+  }
+  .sideBar__logo--title {
+    display: block;
+  }
 
+  @include breakpoint('lg') {
+    width: 100px;
     .sideBar__items--title {
-      display: block;
+      display: none;
     }
     .sideBar__logo--title {
-      display: block;
+      display: none;
+    }
+    &:hover {
+      width: 20%;
+
+      .sideBar__items--title {
+        display: block;
+      }
+      .sideBar__logo--title {
+        display: block;
+      }
     }
   }
 
