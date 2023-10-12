@@ -860,14 +860,13 @@ const bakalavrMagistrSeries = [25, 50, 25]
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 20px;
-
   gap: 20px;
 
-  @include breakpoint('md') {
+  @include breakpoint('lg') {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include breakpoint('lg') {
+  @include breakpoint('xl') {
     grid-template-columns: repeat(7, 1fr);
   }
 }

@@ -56,14 +56,6 @@
             />
           </svg>
         </button>
-
-        <!-- <button
-          v-else
-          :class="$style.passwordToggle"
-          @click="togglePasswordShow"
-        >
-          <font-awesome-icon icon="fa-eye-slash" />
-        </button> -->
       </div>
 
       <input
